@@ -1,1 +1,19 @@
-theme: jekyll-theme-cayman
+markdown: kramdown
+highlighter: rouge
+#permalink: /blog/:categories/:year/:month/:day/:title.html
+permalink: /blog/:year/:month/:day/:title.html
+
+#_Plugins
+safe: false
+
+#Collections author list info.
+collections:
+    authors:
+        output: true
+        permalink: /authors/:path/
+plugins:
+    - jekyll-paginate
+leancloud:
+  enable: true
+  app_id: 3kzzUi5zFw00fQacd9NBe2ze-gzGzoHsz
+  app_key: y0fPCw77KC6oQuSRfL9U14lY
