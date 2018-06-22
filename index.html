@@ -150,6 +150,24 @@ limit_tags: 8
                         </span>
                     </a>
                     <div id="categorybar-list">
+						{% for cate in site.categories %}
+							{% assign ca_name = cate | first %}
+							{% if ca_name != page.category %}
+							<a class='list-group-item list-group-item-default' href='/categories/{{ cate | first | strip |  downcase }}/'>
+								{{ cate | first }}
+								<span class='badge pull-right'>
+									{{ cate | last | size }}
+								</span>
+							</a>
+							{% else %}
+							<a class='list-group-item list-group-item-default' href='javascript:void(0)'>
+								{{ cate | first }}
+								<span class='badge pull-right'>
+									{{ cate | last | size }}
+								</span>
+							</a>
+							{% endif %}
+						{% endfor %}
                     </div>
                 </div>
                 <!-- 人气博主 -->

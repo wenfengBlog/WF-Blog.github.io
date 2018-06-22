@@ -44,6 +44,7 @@ $(function() {
         $(this).children(".post_scan").css('background-color','#fff');
     });
     //分类列表
+	<!--
     $.getJSON("/categorycount.json",function(o){
         $.each( o, function( i , item ){
             var content =
@@ -53,6 +54,7 @@ $(function() {
             $("#categorybar-list").append(content);
         });
     });
+	-->
     //人气博主
     $.getJSON("/authors.json",function(o){
         o.sort(by("articles"));
