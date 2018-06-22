@@ -44,17 +44,17 @@ $(function() {
         $(this).children(".post_scan").css('background-color','#fff');
     });
     //分类列表
-	<!--
-    $.getJSON("/categorycount.json",function(o){
-        $.each( o, function( i , item ){
-            var content =
-            "<a class='list-group-item' href='/categories/"+item[0]+"/'>"
-            +item[1]+"<span class='badge pull-right'>"+item[2]+
-            "</span><div class='inset-line'></div></a>";
-            $("#categorybar-list").append(content);
-        });
-    });
-	-->
+	
+    //$.getJSON("/categorycount.json",function(o){
+    //    $.each( o, function( i , item ){
+    //        var content =
+    //        "<a class='list-group-item' href='/categories/"+item[0]+"/'>"
+    //        +item[1]+"<span class='badge pull-right'>"+item[2]+
+    //        "</span><div class='inset-line'></div></a>";
+    //        $("#categorybar-list").append(content);
+    //    });
+    //});
+	
     //人气博主
     $.getJSON("/authors.json",function(o){
         o.sort(by("articles"));
